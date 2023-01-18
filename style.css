@@ -1,0 +1,98 @@
+header{
+    display: flex;
+    background: linear-gradient(45deg, darkblue,rgb(35, 0, 35));
+    color: white;
+    justify-content: flex-end;
+    font-size: 40px;
+    padding: 5px 150px 5px;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+.block {
+    width: 25%;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+input{
+    height: 40px;
+    font-size: 20px;
+}
+
+button{
+    background-color: darkblue;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+button:hover{
+    background-color: white;
+    color: darkblue;
+}
+
+.card{
+    width: 75%;
+    flex-direction: column;
+    display: flex;
+    padding: 10px; 
+}
+
+
+hr{
+    border: 1px solid black;
+}
+
+.card-content{
+    border: 1px solid black;
+}
+
+.forecast{
+    padding: 15px 5px;
+}
+
+li{
+    background-color: gray;
+    color: black;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+#forecast-items{
+    display: flex;
+    margin: 3px;
+}
+
+#forecast-items div{
+    background-color:rgb(110, 104, 104);
+    color: white;
+    border: 1px solid black;
+    width: 25%;
+    margin: 3px;
+    height: 250px;
+}
+
+#forecast-items p{
+    display: block;
+    height: 18%;
+    font-size: 17.5px;
+}
+
+li:hover{
+    background-color: darkblue;
+    color: white;
+}

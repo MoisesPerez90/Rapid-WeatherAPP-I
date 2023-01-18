@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+  </head>
+
+  <body>
+    <header>
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <main>
+      <article class="block">
+        <div class="searching-section">
+          <form id="user-form">
+            <label class="title is-3">Search for a City</label>
+            <input name="city" id="city2search" type="text" placeholder="San Diego" onfocus="this.value=''">
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+        <hr>
+
+        <ul id="searched-history">
+        </ul>
+      </article>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <h2 class="city-info title is-3" id="displayedCity"></h2>
+            <h3 class="title is-5 date-info">Current date: 
+              <span id="display-currentDay"></span>
+            </h3>
+            <i id="weatherImage"></i>
+            <p id="temperature">Temp: </p>
+            <p id="wind-velocity">Wind: </p>
+            <p id="humidity">Humidity: </p>
+          </div>
+        </div>
+
+        <div class="forecast">
+          <h2 class="title is-4">
+            <span>5-Day Forecast</span>
+          </h2>
+          <ul id="forecast-items">
+          </ul>
+        </div>
+
+      </div>
+      
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
