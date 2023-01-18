@@ -10,7 +10,7 @@ var forecastEl = document.querySelector('#forecast-items');
 var historial = [];
 
 function forecast(lat, lon){
-  const forecastURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=c329491a89f4a5039c2d007289d8b789';
+  const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=c329491a89f4a5039c2d007289d8b789';
   fetch(forecastURL) 
     .then(function (response) {
       return response.json(); 
@@ -26,7 +26,7 @@ function displayForecastCard(data){
   var currentDay = document.getElementById('display-currentDay')
   currentDay.innerHTML = todayDate.format('MMMM D, YYYY');
   var currentTemp = (((data.list[0].main.temp) - 273.15) * (1.8)) + 32;
-  currentWeatherImage.innerHTML = '<img src=http://openweathermap.org/img/w/'+ data.list[0].weather[0].icon +'.png>';
+  currentWeatherImage.innerHTML = '<img src=https://openweathermap.org/img/w/'+ data.list[0].weather[0].icon +'.png>';
 
 
 
@@ -40,7 +40,7 @@ function displayForecastCard(data){
     var tempoConversion = (((data.list[i].main.temp) - 273.15) * (1.8)) + 32;
     
     forecastCard.innerHTML = '<p> Date: '+ forecastDate.format('MMMM D, YYYY') +'</p>\
-    <i id="weatherImage">    <img src="http://openweathermap.org/img/w/'+ data.list[i].weather[0].icon +'.png"  </i>\
+    <i id="weatherImage">    <img src="https://openweathermap.org/img/w/'+ data.list[i].weather[0].icon +'.png"  </i>\
     <p>Temp: '+ tempoConversion.toFixed() +' °F </p>\
     <p>Wind: '+ data.list[i].wind.speed +' MPH</p>\
     <p">Humidity: '+ data.list[i].main.humidity +' %</p>';
@@ -51,7 +51,7 @@ function displayForecastCard(data){
 
 function geolocation(City){
   currentCity.textContent = City;
-  const geocodingURL = 'http://api.openweathermap.org/geo/1.0/direct?q='+City+'&limit=1&units=imperial&appid=ea0763230740eaf545ca4348dc8ed6be';
+  const geocodingURL = 'https://api.openweathermap.org/geo/1.0/direct?q='+City+'&limit=1&units=imperial&appid=ea0763230740eaf545ca4348dc8ed6be';
   fetch(geocodingURL) 
     .then(function (response) {
       return response.json(); 
